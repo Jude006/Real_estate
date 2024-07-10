@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  
+    <style>
+        header.scrolled{
+       background-color: white;
+       padding: 10px;
+       opacity: 0.98;
+       z-index: 100;
+       transition: ease-in 0.7s;
+       top: 2;
+       box-shadow: 0 5px 8px rgba(37, 34, 34, 0.1);
+     }
+     .box:hover .carlos{
+        background-color: palevioletred;
+        color: white;
+        transition: ease-in 0.3s;
+     }
+       </style>
+       <header class=" top-0 z-50 w-full px-6 fixed ease-in duration-500 bg-blue-50">
+           <nav class="flex justify-between items-center font-mont ">
+               <div>
+                   <img src="img/logo.png" alt="">
+               </div>
+               <div class=" text-[#2e3746] lg:flex hidden ">
+                   <ul class="flex lg:flex-row flex-col gap-6 duration-200 ease-in font-mont cursor-pointer">
+                       <li class="hover:text-primary duration-200 ease-in"><a href="/src/index.html">Home</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="about.html">About</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="buy.html">Buy</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="page.html">Pages</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="news.html">News</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="contact.html">Contact</a></li>
+                       <li class="hover:text-primary duration-200 ease-in"><a href="agent.html">Agent</a></li>
+                   </ul>
+                 
+               </div>
+               <div class="lg:hidden flex" id="menu-icon">
+                   <i class="fa-solid fa-bars text-3xl text-[#FF7676]"></i>
+               </div>
+               <div class="lg:flex hidden">
+                   <button class="btn">Create Listing</button>
+               </div>
+           </nav>
+           <div class="hidden " id="menu">
+               <div class=" text-[#2e3746] lg:hidden  bg-white w-full p-10 absolute z-40 left-0 " >
+                   <ul class="flex lg:flex-row flex-col gap-6 ">
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="index.html">Home</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="about.html">About</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="buy.html">Buy</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="page.html">Pages</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="news.html">News</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="contact.html">Contact</a></li>
+                       <li class="hover:text-[#ff7676] ease-in duration-200"><a href="agent.html">Agent</a></li>
+                   </ul>
+                   <div class="flex mt-5">
+                       <button class="btn">Create Listing</button>
+                   </div>
+               </div>
+           </div>
+          
+       </header>
+
+       <div class="relative w-full h-screen bg-cover bg-center" style="background-image: url(img/agent-landing-page\'.jpg);height: 60vh;">
+   
+    
+        <!-- Centered Text -->
+        <div class="relative flex items-center justify-center w-full h-full">
+          <div class="text-center">
+            <h1 class="text-4xl sm:text-6xl font-semibold text-white">Our Agent</h1>
+            <p class="mt-4 text-xl sm:text-2xl text-white">Find your dream home with us</p>
+          </div>
+        </div>
+    </div>
+
+    <section>
+        <div>
+            <div class="flex items-center justify-center">
+                <p class="border-b border-black w-12"></p>
+                <p class="font-medium text-2xl mx-2">Agents</p>
+                <p class="border-b border-black w-12"></p>
+            </div>
+            <div class="text-center text-4xl font-bold mt-4">
+                <p>Our Agents</p>
+            </div>
+            <div class="grid md:grid-cols-4 grid-cols-1 gap-6 mt-14">
+                <div class="box relative">
+                    <img src="img/team-1.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4 ">Carlos Anderson</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-md text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative box">
+                    <img src="img/team-2.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Mike Bosch</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-md text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative box">
+                    <img src="img/team-3.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col justify-center ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Jessica Moore</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-sm text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative box">
+                    <img src="img/team-4.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Sarah Geremino</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-sm text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-4 grid-cols-1 gap-6  mt-8">
+                <div class="relative box">
+                    <img src="img/team-5.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Nicole Jhonson</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-sm text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative box">
+                    <img src="img/team-6.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">John Cole</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-sm text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative box">
+                    <img src="img/team-7.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Simbla Skype</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-md text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative box">
+                    <img src="img/team-8.jpg.webp" alt="" class="relative">
+                    <div class="absolute bottom-0 flex flex-col ml-2">
+                        <p class="carlos text-center font-bold bg-white text-black ml-4">Mary Simon</p>
+                        <div class="flex gap-8  justify-center items-center p-2">
+                            <p class="bg-white rounded-md text-center text-black px-2">Listing</p>
+                            <div class="bg-white rounded-md text-center">10 Properties</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div>
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="md:flex md:justify-between">
+                
+                <!-- Company Info -->
+                <div class="mb-6 md:mb-0">
+                  <h3 class="text-2xl font-bold">Real Estate Company</h3>
+                  <p class="mt-2 text-gray-400">Your dream home awaits.</p>
+                  <p class="mt-2 text-gray-400">123 Main Street, City, State, 12345</p>
+                  <p class="mt-2 text-gray-400">Email: info@realestatecompany.com</p>
+                  <p class="mt-2 text-gray-400">Phone: (123) 456-7890</p>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="mb-6 md:mb-0">
+                  <h3 class="text-lg font-bold">Quick Links</h3>
+                  <ul class="mt-2 space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Properties</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                  </ul>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="mb-6 md:mb-0">
+                  <h3 class="text-lg font-bold">Follow Us</h3>
+                  <div class="flex mt-2 space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.62 8.07 8.29 8.76v-6.19h-2.5v-2.58h2.5v-1.96c0-2.52 1.48-3.93 3.75-3.93 1.09 0 2.24.2 2.24.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.76l-.44 2.58h-2.32v6.19c4.67-.69 8.29-4.35 8.29-8.76 0-5.5-4.46-9.96-9.96-9.96z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.59.58-2.46.68.88-.53 1.55-1.37 1.87-2.38-.83.5-1.75.86-2.73 1.05a4.47 4.47 0 00-7.63 4.07 12.66 12.66 0 01-9.18-4.65 4.5 4.5 0 001.38 6.01c-.71-.02-1.37-.22-1.95-.54v.06a4.48 4.48 0 003.6 4.39c-.67.18-1.37.2-2.05.08a4.48 4.48 0 004.19 3.12A9.01 9.01 0 012 19.54 12.63 12.63 0 007 21c8.2 0 12.69-6.79 12.69-12.68 0-.2 0-.41-.01-.61A9.16 9.16 0 0022.46 6z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.49 0H2.51A2.51 2.51 0 000 2.51v18.98A2.51 2.51 0 002.51 24h18.98A2.51 2.51 0 0024 21.49V2.51A2.51 2.51 0 0021.49 0zM8.08 20.13H4.79V9h3.29v11.13zm-1.64-12.7a1.89 1.89 0 110-3.78 1.89 1.89 0 010 3.78zM20 20.13h-3.29v-5.39c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.41-2.07 2.86v5.48h-3.29V9h3.15v1.52h.05c.44-.83 1.52-1.7 3.13-1.7 3.34 0 3.96 2.2 3.96 5.06v6.25z"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Bottom Section -->
+              <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
+                <p>&copy; 2024 Real Estate Company. All rights reserved.</p>
+                <p class="mt-2">
+                  <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a> | 
+                  <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                </p>
+              </div>
+            </div>
+          </footer>
+        
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

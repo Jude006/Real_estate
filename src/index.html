@@ -1,0 +1,854 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <style>
+        /* Keyframes for slide-in animation */
+        @keyframes slide-in {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+    
+        /* Initial hidden state for the slide-in box */
+        .slide-in-hidden {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+    
+        /* Slide-in animation applied */
+        .slide-in-visible {
+          animation: slide-in 1s forwards;
+        }
+        @keyframes shake {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      20%, 60% {
+        transform: translateY(-10px);
+      }
+      40%, 80% {
+        transform: translateY(10px);
+      }
+    }
+    .section2{
+        background-color: rgba(245, 245, 245, 0.548);
+    }
+
+
+    /* Apply the shake animation with a 5-second pause between cycles */
+    .dance {
+      animation: shake 1s linear 0s 3, none 5s linear 3s infinite;
+    }
+
+    header.scrolled{
+    background-color: white;
+        padding: 10px;
+    opacity: 0.98;
+    z-index: 100;
+    transition: ease-in 0.7s;
+    top: 2;
+    box-shadow: 0 5px 8px rgba(37, 34, 34, 0.1);
+}
+    .boxes:hover{
+        padding: 25px 20px;
+        background-color: #ff7676;
+        transition: ease-in 0.3s;
+    }
+    .boxes:hover .icono{
+        opacity: 1.1;
+    }
+    .section3{
+        background-color: whitesmoke;
+    }
+    .bg-fixed {
+      background-attachment: fixed;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+   
+
+        .background1 {
+            background-image: url(img/newly-5-1.webp);
+        }
+        .background2 {
+            background-image: url(img/newly-6.webp);
+        }
+       
+        .background {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+      </style>
+    <header class=" top-0 z-50 w-full px-6 fixed ease-in duration-500 bg-blue-100">
+        <nav class="flex justify-between items-center font-mont ">
+            <div>
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class=" text-[#2e3746] lg:flex hidden ">
+                <ul class="flex lg:flex-row flex-col gap-6 duration-200 ease-in font-mont cursor-pointer">
+                    <li class="hover:text-primary duration-200 ease-in"><a href="/src/index.html">Home</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="about.html">About</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="buy.html">Buy</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="page.html">Pages</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="news.html">News</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="contact.html">Contact</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="agent.html">Agent</a></li>
+                </ul>
+              
+            </div>
+            <div class="lg:hidden flex" id="menu-icon">
+                <i class="fa-solid fa-bars text-3xl text-[#FF7676]"></i>
+            </div>
+            <div class="lg:flex hidden">
+                <button class="btn">Create Listing</button>
+            </div>
+        </nav>
+        <div class="hidden " id="menu">
+            <div class=" text-[#2e3746] lg:hidden  bg-white w-full p-10 absolute z-40 left-0 " >
+                <ul class="flex lg:flex-row flex-col gap-6 ">
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="index.html">Home</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="about.html">About</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="buy.html">Buy</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="page.html">Pages</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="news.html">News</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="contact.html">Contact</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="agent.html">Agent</a></li>
+                </ul>
+                <div class="flex mt-5">
+                    <button class="btn">Create Listing</button>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+
+    <div>
+
+        <div >
+
+
+            <div class="buyern overflow-hidden bg-fixed relative">
+                <div class="background background1 active flex justify-center items-center text-white text-center">
+                    <div class="pt-56">
+                      <div>
+                       <p class="md:text-6xl  font-semibold text-white">Let Your Home <br> Be Unique & <br>Stylist</p>
+                      </div>
+                      <div>
+                        <p class="text-center mt-6 text-sm font-light text-white tracking-wider">A small river named Duden flows by their place and supplies it with the <br>necessary regelialia. It is a paradisematic country, in which roasted parts of <br>sentences fly into your mouth.</p>
+                      </div>
+                    <div class="mt-7">
+                        <button class="btn px-8"><a href="#">Learn more <span class="ml-2"></span></a></button>
+                    </div>
+                    <div class="flex gap-4 justify-center mt-2">
+                        <div class="">
+                            <button class="btc"><a href="#">Buy properties</a></button>
+                        </div>
+                        <div>
+                            <button class="btn"><a href="#">Rent Properties</a></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="background background2 flex justify-center items-center text-white text-center">
+                    <div class="pt-56">
+                        <div>
+                         <p class="md:text-7xl  font-semibold text-white">Modern House Make <br> Better Life</p>
+                        </div>
+                        <div class="mt-4">
+                          <p class="text-center mt-6 text-sm font-light text-white tracking-wider">A small river named Duden flows by their place and supplies it with the <br>necessary regelialia. It is a paradisematic country, in which roasted parts of <br>sentences fly into your mouth.</p>
+                        </div>
+                      <div class="mt-8">
+                          <button class="btn px-8"><a href="#">Learn more <span class="ml-2"><i class="fa-solid fa-arrow-right"></i></span></a></button>
+                      </div>
+                      <div class="flex gap-4 justify-center mt-2">
+                          <div class="">
+                              <button class="btc"><a href="#">Buy properties</a></button>
+                          </div>
+                          <div>
+                              <button class="btn"><a href="#">Rent Properties</a></button>
+                          </div>
+                      </div>
+                </div>
+               
+            </div>
+            </div>
+
+
+    <!-- section1 -->
+
+  
+    <section  class="">
+        <div class="pt-10">
+            <p class="text-center text-gray-400">Find Your Dream House</p>
+        </div>
+        <div class="mt-4 font-bold text-5xl">
+            <p class="text-center">How It Work</p>
+        </div>
+        <div class="flex justify-center">
+            <p class="border-b-4 border-primary w-20 text-center mt-4"></p>
+        </div>
+        <div class="grid mt-8 md:grid-cols-3 grid-cols-1 gap-8 ">
+            <div class=" py-4">
+                <div class="flex justify-center items-center"><img src="img/howit-works-1.png.webp" alt=""></div>
+                <div class="mt-2">
+                    <p class="text-center font-semibold text-2xl">Search and Find Apartment</p>
+                </div>
+                <div>
+                    <p class="text-center mt-4 font-light">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore.</p>
+                </div>
+            </div>
+            <div class=" py-4">
+                <div class="flex justify-center items-center"><img src="img/howit-works-2.png.webp" alt=""></div>
+                <div class="mt-2">
+                    <p class="text-center font-semibold text-2xl">Search and Find Apartment</p>
+                </div>
+                <div>
+                    <p class="text-center mt-4 font-light">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore.</p>
+                </div>
+            </div>
+            <div class=" py-4">
+                <div class="flex justify-center items-center"><img src="img/howit-works-3.png.webp" alt=""></div>
+                <div class="mt-2">
+                    <p class="text-center font-semibold text-2xl">Search and Find Apartment</p>
+                </div>
+                <div>
+                    <p class="text-center mt-4 font-light">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="font-barlow">
+     <div class="">
+        <div class="md:p-10 p-2">
+            <p class="text-secondary font-medium md:text-[4rem] text-[3rem] text-center">Recently Added Homes</p>
+        </div>
+        <div class=" grid lg:grid-cols-3 flex-col gap-8 justify-center  ">
+            <div>
+                <div class="relative"><img src="img/added1.webp" alt="">
+                    <div class="text-white font-bold bg-red-600 w-[80px] text-center py-4 absolute top-0">New</div>
+                </div>
+                <div>
+                    <div class="text-secondary font-medium mt-8 text-[2rem]">
+                        <p>$469,000</p>
+                    </div>
+                    <div>
+                        <p class="text-secondary mt-2 text-[1.2rem] font-medium">3 Bedrooms Townhouse</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-secondary font-medium">Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus. Class aptent taciti sociosqu ad litora.</p>
+                    </div>
+                    <div>
+                        <p class="text-red-600 underline mt-2 font-bold"><a href="#">Find out more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative"><img src="img/added2.webp" alt="">
+                    <div class="text-white font-bold bg-[#FFBA00] w-[80px] text-center py-4 absolute top-0">Offer</div>
+                </div>
+                <div>
+                    <div class="text-secondary font-medium mt-8 text-[2rem]">
+                        <p>$469,000</p>
+                    </div>
+                    <div>
+                        <p class="text-secondary mt-2 text-[1.2rem] font-medium">3 Bedrooms Townhouse</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-secondary font-medium">Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus. Class aptent taciti sociosqu ad litora.</p>
+                    </div>
+                    <div>
+                        <p class="text-red-600 underline mt-2 font-bold"><a href="#">Find out more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative"><img src="img/added3.webp" alt="">
+                    <div class="text-white font-bold bg-red-600 w-[80px] text-center py-4 absolute top-0">New</div>
+                </div>
+                <div>
+                    <div class="text-secondary font-medium mt-8 text-[2rem]">
+                        <p>$469,000</p>
+                    </div>
+                    <div>
+                        <p class="text-secondary mt-2 text-[1.2rem] font-medium">3 Bedrooms Townhouse</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-secondary font-medium">Donec eget efficitur ex. Donec eget dolor vitae eros feugiat tristique id vitae massa. Proin vulputate congue rutrum. Fusce lobortis a enim eget tempus. Class aptent taciti sociosqu ad litora.</p>
+                    </div>
+                    <div>
+                        <p class="text-red-600 underline mt-2 font-bold"><a href="#">Find out more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    </section>
+
+
+    <section class="section2 md:px-20 px-4 py-6 text-[#322429] ">
+        <div class="relative">
+            <div>
+                <p class="text-[3rem] text-black font-bold text-center">What You Area Looking For?</p>
+            </div>
+            <div class="flex  justify-center mt-2">
+                <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center"></p>
+            </div>
+            <div class="mt-6 text-center font-medium text-[1.3rem]">
+                <p>Mauris primis turpis Laoreet magna felis mi amet quam enim curae. Sodales <br> semper tempor dictum faucibus habitasse.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  md:px-16 px-2 md:mt-8 mt-4 justify-center">
+                <div class="boxes bg-white px-6 py-1 md:mb-0 mb-4">
+                    <div class="flex justify-center"><img src="img/look  replace.jpg" alt="" class="w-[150px] h-[150px]  rounded-full bg-primary"></div>
+                    <div>
+                        <p class="tracking-normal   mt-4 font-medium text-2xl text-center">Modern Villa</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-center">Market research and analysis to find <br> business solution.</p>
+                    </div>
+                    <div class="icono flex justify-center w-[50px] h-[50px] items-center text-center  rounded-full mt-4 opacity-0 bg-white text-2xl mx-auto">
+                        <p class="text-center flex justify-center  text-primary"><i class="fa-solid fa-house"></i></p>
+                    </div>
+                </div>
+                <div class="boxes bg-white px-6 py-1 md:mb-0 mb-4 rounded-md">
+                    <div class="flex justify-center"><img src="img/sam-1.jpg" alt="" class="w-[150px] h-[150px] rounded-full "></div>
+                    <div>
+                        <p class="tracking-normal  mt-4 font-medium text-2xl text-center">Family house</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-center">Market research and analysis to find <br> business solution.</p>
+                    </div>
+                    <div class="icono flex justify-center w-[50px] h-[50px] mt-4 opacity-0 bg-white text-2xl items-center rounded-full mx-auto">
+                        <p class="text-center flex justify-center  text-primary"><i class="fa-solid fa-house"></i></p>
+                    </div>
+                </div>
+                <div class="boxes bg-white px-6 py-1 md:mb-0 mb-4 rounded-md">
+                    <div class="flex justify-center"><img src="img/sam-2.jpg" alt="" class="w-[150px] h-[150px] rounded-full "></div>
+                    <div>
+                        <p class="tracking-normal   mt-4 font-medium text-2xl text-center">Office Building</p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-center">Market research and analysis to find <br> business solution.</p>
+                    </div>
+                    <div class="icono flex justify-center w-[50px] h-[50px] rounded-full mx-auto mt-4 opacity-0 bg-white text-2xl items-center text-center">
+                        <p class="flex justify-center text-primary"><i class="fa-solid fa-house"></i></p>
+                    </div>
+                </div>
+                <div class="boxes bg-white px-6 py-1 md:mb-0 mb-4 rounded-md">
+                    <div class="flex justify-center hover:bg-primary"><img src="img/sam-3.avif" alt="" class="w-[150px] h-[150px] rounded-full "></div>
+                    <div>
+                        <p class="tracking-normal   mt-4 font-medium text-2xl text-center">Apartment</p>
+                    </div>  
+                    <div class="mt-4">
+                        <p class="text-center">Market research and analysis to find <br> business solution.</p>
+                    </div>  
+                    <div class="icono flex justify-center w-[50px] h-[50px] mx-auto rounded-full mt-4 opacity-0 bg-white text-2xl items-center text-center">
+                        <p class="flex justify-center text-primary"><i class="fa-solid fa-house"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+
+    <section class="section3">
+        <div>
+            <div>
+                <div>
+                    <p class="text-dim font-bold text-5xl text-center p-10">Find Properties in These Cities</p>
+                </div>
+                <div>
+                    <p class="text-center tracking-wider font-sm  text-2xl">Mauris primis turpis Laoreet magna felis mi amet quam enim curae. <br> Sodales semper tempor dictum faucibus habitasse.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center mt-8 gap-6 lg:py-8 text-secondary" >
+                <div class="flex flex-col justify-center  ">
+                    <div class="flex justify-center items-center"><img src="img/country-1.png" alt="" class="w-[230px] h-[230px] rounded-full"></div>
+                    <div class="text-center mt-2 leading-relaxed">
+                        <p class="font-medium text-2xl mt-2">Miami</p>
+                        <p>82 properties</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-center items-center"><img src="img/country-2.png" alt="" class="w-[230px] h-[230px] rounded-full"></div>
+                    <div class="text-center mt-2 leading-relaxed">
+                        <p class="font-medium text-2xl mt-2">Los Angeles</p>
+                        <p>57 properties</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-center"><img src="img/country3.png" alt="" class="w-[230px] h-[230px] rounded-full"></div>
+                    <div class="text-center mt-2 leading-relaxed">
+                        <p class="font-medium text-2xl mt-2">Rome</p>
+                        <p>170 properties</p>
+                    </div>
+                </div>
+     <div>
+                    <div class="justify-center flex"><img src="img/country4.png" alt="" class="w-[230px] h-[230px] rounded-full"></div>
+                    <div class="text-center mt-2 leading-relaxed">
+                        <p class="font-medium text-2xl mt-2">Paris</p>
+                        <p>17 properties</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+       
+        <div class="relative w-full md:h-[70vh] h-[90vh] bg-fixed bg-cover bg-center" style="background-image: url('img/background5.jpg');">
+            <div class="absolute inset-0 flex justify-start ml-20 items-center">
+              <div class="bg-white p-12 rounded-lg shadow-lg ">
+                <h2 class="text-4xl font-bold mb-4">Are you looking for modern <br>apartment?</h2>
+                <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center my-4"></p>
+                <p class="text-secondary">Accumsan justo nunc maecenas nostra pulvinar augue nunc rhoncus <br>consequat a felis Mollis sollicitudin proin turpis sociis in erat eros lectus class <br>potenti lobortis enim scelerisque.</p>
+                <div class="my-4">
+                    <button class="btn"><a href="#">Booking Now</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+           
+    </section>
+
+    <section class="section3 md:px-16 px-2 md:py-28 py-10 font-balow">
+        <div>
+            <div>
+                <div class="ml-5">
+                    <p class="text-primary font-medium text-[1.2rem] ">Our Listed</p>
+                </div>
+                <div class="flex justify-between items-center mt-2 ml-6">
+                    <p class="text-secondary font-bold text-4xl">Property Agents</p>
+                    <p class="text-secondary underline">View all agents</p>
+                </div>
+            </div>
+            <div>
+                <div class="container mx-auto mt-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div class="box bg-gray-100 p-4 rounded-lg shadow-sm text-center">
+                        <img src="img/agent-1.jpg" alt="Image 1" class="mx-auto mb-4">
+                        <div class="text-gray-700 mb-2 flex justify-between mt-4">
+                            <p class="font-medium ">Luann McLawhorn</p>
+                            <p class="bg-primary px-2 text-white py-1">Score 4.50</p>
+                        </div>
+                        <p class="text-start mt-2 py-2">At 1st April, 2012</p>
+                      </div>
+                      <div class="box bg-gray-100 p-4 rounded-lg shadow-sm text-center">
+                        <img src="img/agent-2.jpg" alt="Image 2" class="mx-auto mb-4">
+                        <div class="text-gray-700 mb-2 flex justify-between mt-4">
+                            <p class="font-medium ">Ronald Johnson</p>
+                            <p class="bg-primary px-2 text-white py-1">Score 4.50</p>
+                        </div>
+                        <p class="text-start mt-2 py-2">At 1st April, 2012</p>
+                      </div>
+                      <div class="box bg-gray-100 p-4 rounded-lg shadow-sm text-center">
+                        <img src="img/agent-3.jpg" alt="Image 3" class="mx-auto mb-4">
+                        <div class="text-gray-700 mb-2 flex justify-between mt-4">
+                            <p class="font-medium ">John M. Riddle</p>
+                            <p class="bg-primary px-2 text-white py-1">Score 5.5</p>
+                        </div>
+                        <p class="text-start mt-2 py-2">At 1st April, 2012</p>
+                      </div>
+                      <div class="box bg-gray-100 p-4 rounded-lg shadow-sm text-center">
+                        <img src="img/agent-4.jpg" alt="Image 4" class="mx-auto mb-4">
+                        <div class="text-gray-700 mb-2 flex justify-between mt-4">
+                            <p class="font-medium ">John M. Riddle
+                            </p>
+                            <p class="bg-primary px-2 text-white py-1">Score 5.0</p>
+                        </div>
+                        <p class="text-start mt-2 py-2">At 1st April, 2012</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3 ">
+        <div class="flex md:flex-row flex-col gap-8">
+            <div>
+                <div>
+                    <p class="text-primary mb-6">Testimonial 3
+                        +
+                    </p>
+                </div>
+                <div>
+                    <p class="text-secondary font-bold text-4xl leading-relaxed">Don't Just Take Our Word for <br>It, See What Others Are <br>Saying
+                    </p>
+                </div>
+                <div>
+                    <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center my-4"></p>
+                </div>
+                <div class="mt-4 leading-loose">
+                    <p class="text-sm leading-loose">Nascetur eleifend curabitur bibendum bibendum auctor tellus magna aenean condimentum <br> erat. Auctor libero Tristique maecenas elit sit nostra est turpis ridiculus nulla parturient <br> potenti sem taciti felis auctor turpis eget feugiat torquent leo conubia interdum, neque <br>senectus ornare massa. Nascetur eleifend curabitur bibendum bibendum auctor tellus magna.</p>
+                </div>
+
+                <div class="w-[150px] h-[150px] rounded-full flex justify-center items-center text-center mx-auto mt-20"><img src="img/man1.jpg" alt="" class=" rounded-full flex justify-center"></div>
+                <div>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus deserunt nihil blanditiis <br>impedit voluptate ad consequatur maxime! Nisi iusto obcaecati nihil repellat est neque excepturi <br>enim perferendis! Totam eum omnis deserunt. Sed et debitis delectus <br> quas ratione molestias doloribus?</p>
+                </div>
+                <div class="mt-6 flex justify-center items-center">
+                    <p><i class="fa-solid fa-quote-right text-primary text-6xl font-bold "></i></p>
+                </div>
+                <div>
+                    <p class="text-center mt-4 font-medium">Mark Wiggins</p>
+                    <p class="text-primary text-center mt-3">CEO of (Grodins group) </p>
+                </div>
+            </div>
+            <div class=" col-span-12 space-y-4 mt-6" >
+                <div class="row-span-8  bg-red-500"><img src="img/man2.png" alt=""></div>
+                <div class="row-span-4 bg-secondary">
+                    <div>
+                        <p class="text-white font-bold text-4xl p-8">Stop Wasting Hours for Living <br> House</p>
+                    </div>
+                    <div class="ml-8">
+                        <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center my-4"></p>
+                    </div>
+                    <div class="flex md:flex-row flex-col justify-between items-center  ml-8 py-6">
+                        <div>
+                            <p class="text-primary font-bold text-4xl">95621+</p>
+                        </div>
+                        <div>
+                            <p class="text-dim">
+                                Feugiat fusce volutpat habitant nullam nostra <br>vestibulum senectus ultricies dolor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class=" md:pl-12 py-6">
+        <div>
+            <p class="text-2xl font-semibold pl-10 mb-4">New Hot Deals</p>
+        </div>
+        <div class="p-4 flex lg:flex-row flex-col gap-9" id="property-list">
+            <div class="h-fit" id="property-1">
+                <div class="relative h-fit"><img src="img/house-1.png" alt="" class="">
+                    <div class="text-white bg-black absolute md:top-6 top-10 ml-6 px-2">For sale</div>
+                    <div class="flex gap-5 absolute  lg:top-56  justify-end text-end items-end right-5">
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-solid fa-right-left"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-regular fa-heart"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-brands fa-searchengin"></i></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[#FF7676] mb-2 font-bold mt-2 text-[1.2rem]">Villa</p>
+                </div>
+                <div>
+                    <p class="text-secondary hover:text-primary duration-200 ease-in font-semibold mb-2">Gorgeous Villa Base view</p>
+                </div>
+                <div>
+                    <p><span class="text-primary mr-2"><i class="fa-solid fa-location-dot"></i></span>2305 tea frog lane Overlandpk</p>
+                </div>
+                <div>
+                    <p ><span class="text-[#FF7676] font-semibold text-[1.3rem]">$12000</span> (Monthly)</p>
+                </div>
+            </div>
+            <div id="property-2">
+                <div class="relative h-fit"><img src="img/house 2.png" alt="" class="">
+                    <div class="text-white bg-black absolute top-6 ml-6 px-2">For sale</div>
+                    <div class="lg:flex hidden gap-5 absolute lg:top-56  justify-end text-end items-end right-5">
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-solid fa-right-left"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-regular fa-heart"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-brands fa-searchengin"></i></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[#FF7676] mb-2 font-bold mt-2 text-[1.2rem]">Villa</p>
+                </div>
+                <div>
+                    <p class="text-secondary hover:text-primary duration-200 ease-in font-semibold mb-2">Gorgeous Villa Base view</p>
+                </div>
+                <div>
+                     <p><span class="text-primary mr-2"><i class="fa-solid fa-location-dot"></i></span>2305 tea frog lane Overlandpk</p>
+                </div>
+                <div>
+                    <p ><span class="text-[#FF7676] font-semibold text-[1.3rem]">$12000</span> (Monthly)</p>
+                </div>
+            </div>
+            <div>
+                <div class="relative h-fit"><img src="img/house-3.png" alt="" class="">
+                    <div class="text-white bg-black absolute top-6 ml-6 px-2">For sale</div>
+                    <div class="lg:flex hidden gap-5 absolute top-56 justify-end text-end items-end right-5">
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-solid fa-right-left"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-regular fa-heart"></i></p>
+                        <p class="bg-gray-400 text-white px-3"><i class="fa-brands fa-searchengin"></i></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[#FF7676] mb-2 font-bold mt-2 text-[1.2rem]">Villa</p>
+                </div>
+                <div>
+                    <p class="text-secondary hover:text-primary duration-200 ease-in font-semibold mb-2">Gorgeous Villa Base view</p>
+                </div>
+                <div>
+                    <p><span class="text-primary mr-2"><i class="fa-solid fa-location-dot"></i></span>2305 tea frog lane Overlandpk</p>
+
+                </div>
+                <div>
+                    <p ><span class="text-[#FF7676] font-semibold text-[1.3rem]">$12000</span> (Monthly)</p>
+                </div>
+            </div>
+            <div>
+        </div>
+    </section>
+
+
+    <section class="section3">
+        <div class="">
+            <div class="py-10">
+                <div class="">
+                    <p class="text-primary mb-2 text-center font-medium text-[1.3rem]">Our Recent Post</p>
+                </div>
+                <div>
+                    <p class="font-bold text-secondary text-4xl text-center mt-4">Publish What We Think, About <br>Our Company Activities</p>
+                </div>
+                <div class="mt-3 flex justify-center items-center">
+                    <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center my-4"></p>
+                </div>
+            </div>
+
+            <div class="flex lg:flex-row flex-col gap-10 pb-10">
+                <div>
+                    <div><img src="img/post-1.png" alt=""></div>
+                    <div class="bg-white py-6 px-2 ease-in duration-200">
+                        <div>
+                            <p class="text-[#181A1d] font-medium text-2xl text-center ease-in duration-200">Our latest development projects by more.
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center text-primary mt-5 px-6 font-semibold font-balow>
+                            <p class="hover:underline decoration-primary">By Robert Haven</p>
+                            <p class="text-gray-400">|</p>
+                            <p class="hover:underline decoration-primary">Dec 25 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="img/post-2.png" alt=""></div>
+                    <div class="bg-white py-6 px-2 ease-in duration-200">
+                        <div>
+                            <p class="text-[#181A1d] font-medium text-2xl text-center ">We are the Next Generation of the Advertise
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center text-primary mt-5 px-6 font-semibold font-balow">
+                            <p class="hover:underline decoration-primary">By Robert Haven</p>
+                            <p class="text-gray-400">|</p>
+                            <p class="hover:underline decoration-primary">Dec 25 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="img/post-3.png" alt=""></div>
+                    <div class="bg-white py-6 px-2">
+                        <div>
+                            <p class="text-[#181a1d] font-medium text-2xl text-center ">Cultivating Market Leadership From the Inside
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center text-primary mt-5 px-6 font-semibold">
+                            <p class="hover:underline decoration-primary">By Robert Haven</p>
+                            <p class="text-gray-400">|</p>
+                            <p class="hover:underline decoration-primary">Dec 25 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white">
+        <div>
+            <div class="flex flex-col justify-center items-center p-6 ">
+                <div class="flex items-center gap-4 w-[250px]  mt-2">
+                    <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center py-3"></p>
+                    <p class="text-[1.2rem] flex justify-center items-center ">Our Client</p>
+                    <p class="text-primary border-b-2 font-bold border-[#ff7676] w-16 text-center py-2"></p>
+                </div>
+                <div class=" w-[250px] h-[10vh]  text-center">
+                    <p class="text-secondary font-medium px-8 py-7 text-2xl border-l-2 border-r-2 border-b-2 border-[#ff7676]">Who is Trusted</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-center tracking-wider font-sm leading-normal text-[1.3rem]">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="flex lg:flex-row flex-col justify-center items-center mt-6">
+                <div class="flex lg:gap-12 gap-8">
+                    <div><img src="img/truested-1.jpg" alt="Real estate"></div>
+                    <div><img src="img/truested-2.jpg" alt="Real estate"></div>
+                </div>
+              <div class="flex lg:mt-0 mt-4 lg:gap-12 gap-8">
+                <div><img src="img/truested-3.jpg" alt="Real estate"></div>
+                <div><img src="img/trusted4.jpg" alt="Real estate"></div>
+              </div>
+              
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="bg-primary p-10 flex lg:flex-row flex-col lg:gap-14 gap-5 items-center absolute">
+        <div>
+            <p class="text-white text-3xl font-bold">Are you looking for a House or Customer for your Property <br>sale?</p>
+        </div>
+        <div class="bg-white px-6 py-3"> 
+            <button class="text-secondary"><a href="#">Subscribe Now</a></button>
+        </div>
+    </div>
+
+    <div class="relative">
+        <img src="img/background1.jpeg" width="100%" alt="" class="h-[70vh]">
+        <div class="absolute top-0 w-full h-[100%] bg-[#393e48ee]"></div>
+
+
+        <div class="absolute top-10 left-0 flex justify-center items-center w-full px-20">
+            
+
+<footer class=" dark:bg-gray-900 w-full">
+    <div class="mx-auto w-full ">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Company</h2>
+            <ul class="text-white dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class=" hover:underline">About</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Careers</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Brand Center</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Help center</h2>
+            <ul class="text-white dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
+            <ul class="text-white dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Download</h2>
+            <ul class="text-white dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="px-4 py-6  dark:bg-gray-700 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-white dark:text-gray-300 sm:text-center">© 2024<a href="">Jude</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Dribbble account</span>
+              </a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+   
+    <script src="main.js"></script>
+    
+       
+</body>
+</html>

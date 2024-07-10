@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+    <style>
+     header.scrolled{
+    background-color: white;
+    padding: 10px;
+    opacity: 0.98;
+    z-index: 100;
+    transition: ease-in 0.7s;
+    top: 2;
+    box-shadow: 0 5px 8px rgba(37, 34, 34, 0.1);
+                }
+    </style>
+    <header class=" top-0 z-50 w-full px-6 fixed ease-in duration-500 bg-blue-50">
+        <nav class="flex justify-between items-center font-mont ">
+            <div>
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class=" text-[#2e3746] lg:flex hidden ">
+                <ul class="flex lg:flex-row flex-col gap-6 duration-200 ease-in font-mont cursor-pointer">
+                    <li class="hover:text-primary duration-200 ease-in"><a href="/src/index.html">Home</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="about.html">About</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="buy.html">Buy</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="page.html">Pages</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="news.html">News</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="contact.html">Contact</a></li>
+                    <li class="hover:text-primary duration-200 ease-in"><a href="agent.html">Agent</a></li>
+                </ul>
+              
+            </div>
+            <div class="lg:hidden flex" id="menu-icon">
+                <i class="fa-solid fa-bars text-3xl text-[#FF7676]"></i>
+            </div>
+            <div class="lg:flex hidden">
+                <button class="btn">Create Listing</button>
+            </div>
+        </nav>
+        <div class="hidden " id="menu">
+            <div class=" text-[#2e3746] lg:hidden  bg-white w-full p-10 absolute z-40 left-0 " >
+                <ul class="flex lg:flex-row flex-col gap-6 ">
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="index.html">Home</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="about.html">About</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="buy.html">Buy</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="page.html">Pages</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="news.html">News</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="contact.html">Contact</a></li>
+                    <li class="hover:text-[#ff7676] ease-in duration-200"><a href="agent.html">Agent</a></li>
+                </ul>
+                <div class="flex mt-5">
+                    <button class="btn">Create Listing</button>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+
+    <div>
+        <div style="background-image: url(img/contact-2.webp);background-position: center;background-size: cover;height: 50vh;" class="w-[100%] bg-center overflow-hidden">
+            <div class=" text-center font-medium text-5xl text-white mt-36">
+                <p>Get In Touch</p>
+            </div>
+            <div class="text-center text-sm font-light mt-4 text-white">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cupiditate <br>ipsum porro, deserunt iure vel aliquam, eos quaerat.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="grid md:grid-cols-2 grid-cols-1">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3962.6380505931616!2d3.2526098666941405!3d6.691674524342791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stoll%20gate%20mokland!5e0!3m2!1sen!2sng!4v1717541913936!5m2!1sen!2sng"  height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="md:w-[600px] w-fit md:ml-0 ml-2"></iframe>
+                </div>
+            <div>
+                <div class="max-w-md w-full mx-auto p-6 bg-white shadow-md rounded-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+                    <form  method="POST" class="space-y-4"  action="https://formspree.io/f/myyrrydy" method="post">
+                      <div>
+                        <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                      </div>
+                      <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                      </div>
+                      <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                      </div>
+                      <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                      </div>
+                      <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+        <section>
+            <div class="grid md:grid-cols-3 grid-cols-1 justify-center gap-6 ">
+                <div class="leading-relaxed text-center border-r border-black">
+                    <div>
+                        <p><i class="fa-regular fa-map"></i></p>
+                    </div>
+                    <div>
+                        <p>Address:</p>
+                    </div>
+                    <div>
+                        <p>12B Victoria Island Lagos</p>
+                    </div>
+                    <div>
+                        <p>Nigeria </p>
+                    </div>
+                </div>
+                <div class="leading-relaxed text-center border-r border-black">
+                    <div>
+                        <p><i class="fa-solid fa-phone"></i></p>
+                    </div>
+                    <div>
+                        <p>Phone:</p>
+                    </div>
+                    <div>
+                        <p>12B Victoria Island Lagos</p>
+                    </div>
+                    <div>
+                        <p>Nigeria </p>
+                    </div>
+                </div>
+                <div class="leading-relaxed text-center">
+                    <div>
+                        <p><i class="fa-regular fa-paper-plane"></i></p>
+                    </div>
+                    <div>
+                        <p>Email:</p>
+                    </div>
+                    <div>
+                        <p>12B Victoria Island Lagos</p>
+                    </div>
+                    <div>
+                        <p>Nigeria </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="md:flex md:justify-between">
+            
+            <!-- Company Info -->
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold">Real Estate Company</h3>
+              <p class="mt-2 text-gray-400">Your dream home awaits.</p>
+              <p class="mt-2 text-gray-400">123 Main Street, City, State, 12345</p>
+              <p class="mt-2 text-gray-400">Email: info@realestatecompany.com</p>
+              <p class="mt-2 text-gray-400">Phone: (123) 456-7890</p>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-lg font-bold">Quick Links</h3>
+              <ul class="mt-2 space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Properties</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+              </ul>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-lg font-bold">Follow Us</h3>
+              <div class="flex mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.62 8.07 8.29 8.76v-6.19h-2.5v-2.58h2.5v-1.96c0-2.52 1.48-3.93 3.75-3.93 1.09 0 2.24.2 2.24.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.76l-.44 2.58h-2.32v6.19c4.67-.69 8.29-4.35 8.29-8.76 0-5.5-4.46-9.96-9.96-9.96z"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.59.58-2.46.68.88-.53 1.55-1.37 1.87-2.38-.83.5-1.75.86-2.73 1.05a4.47 4.47 0 00-7.63 4.07 12.66 12.66 0 01-9.18-4.65 4.5 4.5 0 001.38 6.01c-.71-.02-1.37-.22-1.95-.54v.06a4.48 4.48 0 003.6 4.39c-.67.18-1.37.2-2.05.08a4.48 4.48 0 004.19 3.12A9.01 9.01 0 012 19.54 12.63 12.63 0 007 21c8.2 0 12.69-6.79 12.69-12.68 0-.2 0-.41-.01-.61A9.16 9.16 0 0022.46 6z"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.49 0H2.51A2.51 2.51 0 000 2.51v18.98A2.51 2.51 0 002.51 24h18.98A2.51 2.51 0 0024 21.49V2.51A2.51 2.51 0 0021.49 0zM8.08 20.13H4.79V9h3.29v11.13zm-1.64-12.7a1.89 1.89 0 110-3.78 1.89 1.89 0 010 3.78zM20 20.13h-3.29v-5.39c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.41-2.07 2.86v5.48h-3.29V9h3.15v1.52h.05c.44-.83 1.52-1.7 3.13-1.7 3.34 0 3.96 2.2 3.96 5.06v6.25z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bottom Section -->
+          <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
+            <p>&copy; 2024 Real Estate Company. All rights reserved.</p>
+            <p class="mt-2">
+              <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a> | 
+              <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
